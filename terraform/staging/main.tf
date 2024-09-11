@@ -11,3 +11,8 @@ terraform {
 provider "aws" {
   region = "ap-northeast-1"
 }
+
+resource "aws_s3_bucket" "sample" {
+  bucket = "naruse666-tfaction-sandbox-staging-bucket"
+
+}
