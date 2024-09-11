@@ -10,12 +10,16 @@ resource "aws_iam_openid_connect_provider" "github" {
 
 resource "aws_s3_bucket" "backend" {
   bucket = "tfaction-sandbox-naruse666-backend"
+  tags = {
+    project = "tfaction-sandbox"
+  }
 }
 resource "aws_s3_bucket" "tfmigrate-history" {
   bucket = "tfaction-sandbox-naruse666-tfmigrate-history"
+  tags = {
+    project = "tfaction-sandbox"
+  }
 }
-
-
 
 module "aws" {
   source = "github.com/suzuki-shunsuke/terraform-aws-tfaction?ref=v0.2.2"
