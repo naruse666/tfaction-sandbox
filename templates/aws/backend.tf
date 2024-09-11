@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
-    bucket = "<S3 Bucket Name>"
+    bucket = "tfaction-sandbox-naruse666-backend"
     key    = "%%TARGET%%/v1/terraform.tfstate"
-    region = "us-east-1"
+    region = "ap-northeast-1"
   }
 }
